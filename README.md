@@ -1,47 +1,54 @@
-# Data-Visualization-Challenge
-Data Visualization Challenge
+# # Pymaceuticals Inc.  
+## Investigating the Effectiveness of Cancer Treatments in Mice  
 
-Overview
+### 📌 Overview  
+Pymaceuticals Inc. is a pharmaceutical company developing treatments for squamous cell carcinoma. This project analyzes tumor volume measurements from mice treated with different drug regimens to determine the effectiveness of various treatments. Using Python and data visualization techniques, we clean the dataset, perform statistical analysis, and visualize key findings.  
 
-This analysis examines data from a Pymaceuticals study on the effectiveness of various drug treatments for squamous cell carcinoma (SCC). The study involved 249 mice and tracked their tumor development over 45 days. The analysis focuses on summarizing the data, generating plots, and calculating key statistics to support the clinical study report.
+### Analysis  
 
-Files Used
+- The dataset includes tumor volume measurements from mice treated with different drug regimens. The analysis focuses on summarizing key statistical properties, identifying potential data anomalies, and visualizing treatment effectiveness.  
 
-	•	mouse_metadata.csv: Contains metadata about the mice, including mouse ID, gender, and age.
-	•	study_results.csv: Includes tumor measurement data for each mouse across different time points and drug treatments.
+- Data cleaning revealed duplicate mouse IDs with repeated timepoints, which were removed to ensure data integrity. The final dataset contains **248** unique mice after deduplication.  
 
-Data Preparation
+- Summary statistics of tumor volume for each drug regimen indicate that **Capomulin and Ramicane** had the lowest average tumor volumes, suggesting potential effectiveness in reducing tumor size.  
 
-	1.	Data Merging: Combined mouse_metadata and study_results DataFrames into a single DataFrame.
-	2.	Duplicate Handling: Identified and removed duplicate time points for any mouse ID, resulting in a cleaned DataFrame.
-	3.	Unique Mice Count: Displayed the number of unique mice IDs before and after removing duplicates.
+- Bar and pie charts visualize the number of observations per drug regimen and the gender distribution of the mice. The study had a nearly even split between male and female mice.  
 
-Summary Statistics
+- A box plot analysis of tumor volumes for four key drug regimens revealed potential outliers, particularly in the **Infubinol** and **Ceftamin** groups, highlighting variability in response to treatment.  
 
-	•	Statistics Calculated: Mean, median, variance, standard deviation, and SEM of tumor volume for each drug regimen.
-	•	Method: Generated the summary statistics DataFrame using groupby and summary methods.
+- A line plot of tumor volume over time for an individual mouse treated with Capomulin demonstrates a **steady decline**, suggesting that the drug may be effective.  
 
-Bar and Pie Charts
+- A scatter plot of mouse weight versus average tumor volume for the Capomulin regimen shows a **strong positive correlation**, which was quantified using Pearson's correlation coefficient.  
 
-	1.	Bar Charts:
-	•	Pandas: Generated a bar chart showing the number of rows (Mouse ID/Timepoints) for each drug regimen.
-	•	Matplotlib: Created a similar bar chart using Matplotlib’s pyplot.
-	2.	Pie Charts:
-	•	Pandas: Created a pie chart to visualize the distribution of female versus male mice.
-	•	Matplotlib: Produced a similar pie chart using Matplotlib’s pyplot.
+- A linear regression model further supports the correlation, with the regression line demonstrating a significant relationship between mouse weight and tumor volume.  
 
-Quartiles, Outliers, and Box Plot
+**Conclusion:** The analysis suggests that **Capomulin and Ramicane** are the most promising treatments, with lower average tumor volumes and a consistent reduction in tumor size over time. However, further testing and statistical validation are necessary to confirm these findings.  
 
-	1.	Final Tumor Volume: Calculated the final tumor volume for mice across four drug regimens: Capomulin, Ramicane, Infubinol, and Ceftamin.
-	2.	Outlier Detection: Determined potential outliers using quartiles and IQR.
-	3.	Box Plot: Generated a box plot to show the distribution of final tumor volumes, highlighting outliers.
+## Visualizations
+# [![Screenshot-2025-01-30-at-11-11-45-PM.png](https://i.postimg.cc/jdcwgCbP/Screenshot-2025-01-30-at-11-11-45-PM.png)](https://postimg.cc/N5yjLsLj)
 
-Line Plot and Scatter Plot
+[![Screenshot-2025-01-30-at-11-16-39-PM.png](https://i.postimg.cc/sDjqdHtq/Screenshot-2025-01-30-at-11-16-39-PM.png)](https://postimg.cc/rzHQ5jyN)
 
-	1.	Line Plot: Created a line plot of tumor volume versus time point for mouse ID I509, treated with Capomulin.
-	2.	Scatter Plot: Generated a scatter plot of mouse weight versus average tumor volume for the Capomulin regimen.
+[![Screenshot-2025-01-30-at-11-17-11-PM.png](https://i.postimg.cc/mD4V3t4J/Screenshot-2025-01-30-at-11-17-11-PM.png)](https://postimg.cc/VS7jmsdW)
 
-Correlation and Regression
+[![Screenshot-2025-01-30-at-11-17-44-PM.png](https://i.postimg.cc/tJY6Fjs8/Screenshot-2025-01-30-at-11-17-44-PM.png)](https://postimg.cc/p5Myt3YB)
 
-	1.	Correlation Coefficient: Calculated the Pearson correlation coefficient between mouse weight and average tumor volume.
-	2.	Linear Regression: Computed the linear regression model and plotted the regression line on the scatter plot.
+[![Screenshot-2025-01-30-at-11-18-58-PM.png](https://i.postimg.cc/DwgrGF5y/Screenshot-2025-01-30-at-11-18-58-PM.png)](https://postimg.cc/v44xRJpp)
+
+## Skills Used
+* Data Cleaning: Handling missing data, removing duplicates, and ensuring data integrity.
+* Exploratory Data Analysis (EDA): Generating summary statistics, identifying anomalies, and creating visualizations.
+* Statistical Analysis: Using statistical tests to assess data and establish correlations (e.g., Pearson's correlation).
+* Data Visualization: Creating effective plots (e.g., bar charts, pie charts, box plots, scatter plots, line plots) using Matplotlib.
+* Regression Analysis: Building linear regression models to quantify relationships in the data.
+* Hypothesis Testing: Conducting tests and analyzing data to validate the effectiveness of treatments.
+
+## Technologies Used
+- Python 
+- Pandas  
+- Matplotlib  
+- scipy.stats 
+- Jupyter Notebook  
+
+## Resources
+- Chat GPT
