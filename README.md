@@ -1,7 +1,7 @@
-# # Pymaceuticals Inc.  
+# Pymaceuticals Inc.  
 ## Investigating the Effectiveness of Cancer Treatments in Mice  
 
-### 📌 Overview  
+###  Overview  
 Pymaceuticals Inc. is a pharmaceutical company developing treatments for squamous cell carcinoma. This project analyzes tumor volume measurements from mice treated with different drug regimens to determine the effectiveness of various treatments. Using Python and data visualization techniques, we clean the dataset, perform statistical analysis, and visualize key findings.  
 
 ### Analysis  
